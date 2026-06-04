@@ -10,9 +10,6 @@
 <!-- AOS ANIMATION -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <style>
 * {
     margin: 0;
@@ -25,27 +22,28 @@ body {
     background: #f4f6f9;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* ===== PROGRESS BAR ===== */
+/* PROGRESS BAR */
 #progressBar {
     position: fixed;
     top: 0;
     left: 0;
-    height: 5px;
+    height: 4px;
     width: 0%;
     background: linear-gradient(90deg, #be29ec, #FFC0CB);
     z-index: 9999;
 }
 
-/* ===== FLOATING BACKGROUND ===== */
+/* BACKGROUND */
 body::before {
     content: "";
     position: fixed;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(190,41,236,0.15) 10%, transparent 60%),
-                radial-gradient(circle, rgba(255,192,203,0.15) 10%, transparent 60%);
+    background: radial-gradient(circle, rgba(190,41,236,0.12) 10%, transparent 60%),
+                radial-gradient(circle, rgba(255,192,203,0.12) 10%, transparent 60%);
     animation: floatBG 20s linear infinite;
     z-index: -1;
 }
@@ -56,135 +54,79 @@ body::before {
     100% { transform: translate(0,0); }
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .aina {
     background: linear-gradient(135deg, #be29ec, #FFC0CB);
     color: white;
     text-align: center;
-    padding: 70px 20px;
+    padding: 60px 15px;
 }
 
 .aina h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    word-break: break-word;
 }
 
 .aina p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1rem;
 }
 
-.contact {
-    margin-top: 15px;
-    font-size: 0.95rem;
-}
-
-/* ===== SECTION ===== */
+/* SECTIONS */
 .section {
     background: white;
-    margin: 20px auto;
-    padding: 25px;
-    width: 90%;
+    margin: 15px auto;
+    padding: 18px;
+    width: 92%;
     max-width: 900px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.3s;
 }
 
-.section:hover {
-    transform: translateY(-3px);
-}
-
-/* ===== TITLE ===== */
 .section h2 {
     color: #be29ec;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
 }
 
-.section h2::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: linear-gradient(135deg, #be29ec, #FFC0CB);
-    border-radius: 50%;
-}
-
-/* ===== CARD ===== */
+/* CARD */
 .card {
+    border-left: 4px solid #be29ec;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
     background: #fff;
-    border-left: 5px solid #be29ec;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateX(5px);
-}
-
-/* ===== SKILLS ===== */
+/* SKILLS */
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 8px;
 }
 
 .skills span {
     background: linear-gradient(135deg, #be29ec, #FFC0CB);
     color: white;
-    padding: 8px 14px;
+    padding: 6px 10px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
-/* ===== FORM ===== */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    outline: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #be29ec;
-}
-
-.contact-form button {
-    background: linear-gradient(135deg, #be29ec, #FFC0CB);
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#form-status {
-    font-size: 0.9rem;
-    margin-top: 5px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 15px;
+    margin-top: 20px;
     background: #111827;
     color: white;
+    font-size: 0.9rem;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+    .aina h1 { font-size: 1.5rem; }
+    .section { padding: 15px; }
+    .skills span { font-size: 0.75rem; }
 }
 </style>
 </head>
@@ -196,10 +138,7 @@ footer {
 <header class="aina" data-aos="fade-down">
     <h1><span id="typing"></span></h1>
     <p>Software Engineer | Web Developer | AR Developer</p>
-    <div class="contact">
-        <p>📍 Kuantan, Pahang</p>
-        <p>📧 ainnafisah1001@gmail.com</p>
-    </div>
+    <p>📍 Kuantan, Pahang | 📧 ainnafisah1001@gmail.com</p>
 </header>
 
 <section class="section" data-aos="fade-up">
@@ -209,66 +148,27 @@ footer {
 
 <section class="section" data-aos="zoom-in">
     <h2>Technical Skills</h2>
-
     <div class="skills">
-        <!-- Programming Languages -->
-        <span>PHP</span>
-        <span>Java</span>
-        <span>C++</span>
-        <span>C#</span>
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>MATLAB</span>
-
-        <!-- Web Development -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Responsive Design</span>
-        <span>REST API</span>
-
-        <!-- Frameworks & Tools -->
-        <span>WordPress</span>
-        <span>Elementor</span>
-        <span>WooCommerce</span>
-        <span>Unity</span>
-
-        <!-- Database -->
-        <span>MySQL</span>
-        <span>Database Design</span>
-
-        <!-- Version Control -->
-        <span>Git</span>
-        <span>GitHub</span>
-
-        <!-- Research / AI / ML -->
-        <span>Machine Learning (Basic)</span>
-        <span>Reinforcement Learning</span>
-        <span>Image Processing</span>
-
-        <!-- Tools -->
-        <span>Canva</span>
-        <span>Microsoft Office</span>
-        <span>SEO Tools</span>
-        <span>Debugging</span>
-
-        <!-- Soft Skills -->
-        <span>Problem Solving</span>
-        <span>Teamwork</span>
-        <span>Time Management</span>
-        <span>Critical Thinking</span>
+        <span>PHP</span><span>Java</span><span>C++</span><span>C#</span>
+        <span>Python</span><span>JavaScript</span><span>MATLAB</span>
+        <span>HTML</span><span>CSS</span><span>REST API</span>
+        <span>WordPress</span><span>Unity</span><span>MySQL</span>
+        <span>Git</span><span>GitHub</span>
+        <span>Machine Learning</span><span>Image Processing</span>
+        <span>Problem Solving</span><span>Teamwork</span>
     </div>
 </section>
 
 <section class="section" data-aos="fade-right">
     <h2>Education</h2>
-    <div class="card"><h3>Master</h3><p>UMP (2024–2025)</p></div>
-    <div class="card"><h3>Bachelor</h3><p>UNIMAS (2019–2023)</p></div>
+    <div class="card"><b>Master</b><p>UMP (2024–2025)</p></div>
+    <div class="card"><b>Bachelor</b><p>UNIMAS (2019–2023)</p></div>
 </section>
 
 <section class="section" data-aos="fade-left">
     <h2>Experience</h2>
     <div class="card">
-        <h3>Intern Developer</h3>
+        <b>Intern Developer</b>
         <ul>
             <li>WordPress development</li>
             <li>SEO optimization</li>
@@ -277,10 +177,10 @@ footer {
 </section>
 
 <section class="section" data-aos="fade-up">
-    <h2>Research & Academic Projects</h2>
+    <h2>Research & Projects</h2>
 
     <div class="card">
-        <h3>Image Watermarking</h3>
+        <b>Image Watermarking</b>
         <ul>
             <li>IWT + Schur Decomposition</li>
             <li>PSNR, SSIM, BER evaluation</li>
@@ -288,72 +188,41 @@ footer {
     </div>
 
     <div class="card">
-        <h3>AR Therapy System</h3>
+        <b>AR Therapy System</b>
         <ul>
             <li>Unity + C# development</li>
-            <li>UI/UX design and testing</li>
+            <li>UI/UX testing</li>
         </ul>
     </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section class="section" data-aos="fade-up">
-    <h2>Contact Me</h2>
-
-    <form id="contact-form" class="contact-form">
-        <input type="text" name="user_name" placeholder="Your Name" required>
-        <input type="email" name="user_email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-        <p id="form-status"></p>
-    </form>
 </section>
 
 <footer>
     <p>© 2026 Nurul Ain Nafisah</p>
 </footer>
 
-<!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-AOS.init({ duration: 900, once: true });
+AOS.init({ duration: 800, once: true });
 
-/* Scroll bar */
+/* Progress bar */
 window.onscroll = () => {
     let winScroll = document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     document.getElementById("progressBar").style.width = (winScroll / height) * 100 + "%";
 };
 
-/* Typing */
+/* Typing effect */
 const text = "Nurul Ain Nafisah Binti Muhamad";
 let i = 0;
+
 function type() {
     if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i++);
-        setTimeout(type, 80);
+        setTimeout(type, 70);
     }
 }
 type();
-
-/* EmailJS */
-emailjs.init("YOUR_PUBLIC_KEY");
-
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        this
-    ).then(() => {
-        document.getElementById("form-status").innerText = "Message sent successfully ✅";
-        this.reset();
-    }, () => {
-        document.getElementById("form-status").innerText = "Failed to send ❌";
-    });
-});
 </script>
 
 </body>
