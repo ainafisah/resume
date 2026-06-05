@@ -1,251 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nurul Ain Nafisah - Resume</title>
+<title>Nurul Ain Nafisah - Portfolio Resume</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- AOS ANIMATION -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+:root{
+    --bg1:#0b0014;
+    --bg2:#1a0033;
+    --purple:#a855f7;
+    --pink:#ec4899;
+    --glass:rgba(255,255,255,0.08);
+    --border:rgba(255,255,255,0.15);
 }
 
-body {
-    background: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* PROGRESS BAR */
-#progressBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4px;
-    width: 0%;
-    background: linear-gradient(90deg, #be29ec, #FFC0CB);
-    z-index: 9999;
+body{
+    background: radial-gradient(circle at top, #1b0033, #05000a);
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* BACKGROUND */
-body::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(190,41,236,0.12) 10%, transparent 60%),
-                radial-gradient(circle, rgba(255,192,203,0.12) 10%, transparent 60%);
-    animation: floatBG 20s linear infinite;
-    z-index: -1;
+/* PARTICLES */
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-2;
 }
 
-@keyframes floatBG {
-    0% { transform: translate(0,0); }
-    50% { transform: translate(-5%, -5%); }
-    100% { transform: translate(0,0); }
+/* GLASS */
+.glass{
+    background:var(--glass);
+    backdrop-filter:blur(12px);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+    transition:0.3s;
 }
 
-/* HEADER */
-.aina {
-    background: linear-gradient(135deg, #be29ec, #FFC0CB);
-    color: white;
-    text-align: center;
-    padding: 60px 15px;
+.glass:hover{
+    transform:translateY(-5px);
 }
 
-.aina h1 {
-    font-size: 1.8rem;
-    word-break: break-word;
+/* HERO */
+header{
+    text-align:center;
+    padding:80px 20px;
 }
 
-.aina p {
-    font-size: 1rem;
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-/* SECTIONS */
-.section {
-    background: white;
-    margin: 15px auto;
-    padding: 18px;
-    width: 92%;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.profile-pic{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid var(--purple);
+    box-shadow:0 0 25px rgba(168,85,247,0.5);
 }
 
-.section h2 {
-    color: #be29ec;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
+header h1{
+    font-size:2.2rem;
+    background:linear-gradient(90deg,var(--purple),var(--pink));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-/* CARD */
-.card {
-    border-left: 4px solid #be29ec;
-    padding: 12px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    background: #fff;
+.tagline{
+    opacity:0.85;
+}
+
+/* BADGES */
+.badges{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.badges span{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:0.75rem;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--border);
+}
+
+/* SECTION */
+.section{
+    width:90%;
+    max-width:900px;
+    margin:20px auto;
+    padding:25px;
+}
+
+h2{
+    color:var(--purple);
 }
 
 /* SKILLS */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
-.skills span {
-    background: linear-gradient(135deg, #be29ec, #FFC0CB);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+.skills span{
+    padding:8px 12px;
+    border-radius:20px;
+    background:linear-gradient(135deg,var(--purple),var(--pink));
+    font-size:0.8rem;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    background: #111827;
-    color: white;
-    font-size: 0.9rem;
+/* PROJECTS */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
 }
 
-/* MOBILE FIX */
-@media (max-width: 600px) {
-    .aina h1 { font-size: 1.5rem; }
-    .section { padding: 15px; }
-    .skills span { font-size: 0.75rem; }
+.project-card{
+    padding:15px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--border);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(168,85,247,0.2);
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    font-weight:600;
+}
+
+/* FLOAT */
+.float{
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    opacity:0.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    header h1{font-size:1.6rem;}
 }
 </style>
 </head>
 
 <body>
 
-<div id="progressBar"></div>
+<canvas id="particles"></canvas>
 
-<header class="aina" data-aos="fade-down">
-    <h1><span id="typing"></span></h1>
-    <p>Software Engineer | Web Developer | AR Developer</p>
-    <p>📍 Kuantan, Pahang | 📧 ainnafisah1001@gmail.com</p>
+<header class="glass float" data-aos="fade-down">
+
+    <div class="hero">
+        <img src="your-photo.jpg" class="profile-pic" alt="Profile">
+
+        <div>
+            <h1><span id="typing"></span></h1>
+            <p class="tagline">Building Intelligent Web & AR Systems</p>
+            <p>📍 Kuantan, Pahang | 📧 ainnafisah1001@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="badges">
+        <span>🚀 AR Developer</span>
+        <span>🔐 Watermarking Researcher</span>
+        <span>🤖 ML Explorer</span>
+    </div>
+
+    <div>
+        <a class="btn" href="your-cv.pdf" download>📄 Download CV</a>
+        <a class="btn" href="https://github.com/ainafisah" target="_blank">💻 GitHub</a>
+    </div>
+
 </header>
 
-<section class="section" data-aos="fade-up">
-    <h2>Profile Summary</h2>
-    <p>Master’s candidate in Software Engineering with experience in web development, AR systems, and research.</p>
+<section class="section glass" data-aos="fade-up">
+<h2>Profile</h2>
+<p>Master’s candidate in Software Engineering specializing in web systems, AR development, and intelligent watermarking research.</p>
 </section>
 
-<section class="section" data-aos="zoom-in">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-        <span>PHP</span><span>Java</span><span>C++</span><span>C#</span>
-        <span>Python</span><span>JavaScript</span><span>MATLAB</span>
-        <span>HTML</span><span>CSS</span><span>REST API</span>
-        <span>WordPress</span><span>Unity</span><span>MySQL</span>
-        <span>Git</span><span>GitHub</span>
-        <span>Machine Learning</span><span>Image Processing</span>
-        <span>Problem Solving</span><span>Teamwork</span>
-    </div>
+<section class="section glass" data-aos="zoom-in">
+<h2>Technical Skills</h2>
+<div class="skills">
+<span>PHP</span><span>Java</span><span>C++</span><span>C#</span>
+<span>Python</span><span>JavaScript</span><span>HTML</span>
+<span>CSS</span><span>MySQL</span><span>Unity</span>
+<span>Machine Learning</span><span>Git</span><span>REST API</span>
+</div>
 </section>
 
-<section class="section" data-aos="fade-right">
-    <h2>Education</h2>
-    <div class="card"><b>Master</b><p>UMP (2024–2025)</p></div>
-    <div class="card"><b>Bachelor</b><p>UNIMAS (2019–2023)</p></div>
+<section class="section glass" data-aos="fade-right">
+<h2>Education</h2>
+<div class="card">🎓 Master — UMP (2024–2025)</div>
+<div class="card">🎓 Bachelor — UNIMAS (2019–2023)</div>
 </section>
 
-<section class="section" data-aos="fade-left">
-    <h2>Experience</h2>
-    <div class="card">
-        <b>Intern Developer</b>
-        <ul>
-            <li>WordPress development</li>
-            <li>SEO optimization</li>
-        </ul>
+<section class="section glass" data-aos="fade-up">
+<h2>Projects</h2>
+
+<div class="project-grid">
+
+    <div class="project-card">
+        <h3>🔐 Watermarking AI</h3>
+        <p>IWT + Schur Decomposition + RL Optimization</p>
     </div>
+
+    <div class="project-card">
+        <h3>🧠 AR Therapy System</h3>
+        <p>Unity + C# immersive simulation</p>
+    </div>
+
+</div>
+
 </section>
 
-<section class="section" data-aos="fade-up">
-    <h2>Research & Projects</h2>
+<section class="section glass" data-aos="fade-up" style="text-align:center;">
+<h2>Contact</h2>
+<p>Let’s connect instantly 👇</p>
 
-    <div class="card">
-        <b>Image Watermarking</b>
-        <ul>
-            <li>IWT + Schur Decomposition</li>
-            <li>PSNR, SSIM, BER evaluation</li>
-        </ul>
-    </div>
+<a class="btn" href="https://wa.me/601169112711" target="_blank">
+💬 WhatsApp Me
+</a>
 
-    <div class="card">
-        <b>AR Therapy System</b>
-        <ul>
-            <li>Unity + C# development</li>
-            <li>UI/UX testing</li>
-        </ul>
-    </div>
-</section>
-
-<!-- WHATSAPP CONTACT BOX -->
-<section class="section" data-aos="fade-up">
-    <h2>Contact Me</h2>
-
-    <div class="card" style="text-align:center;">
-        <p>Click below to chat with me instantly on WhatsApp 👇</p>
-
-        <a href="https://wa.me/601169112711?text=Hi%20Ain%20Nafisah%2C%20I%20saw%20your%20resume%20and%20would%20like%20to%20contact%20you"
-           target="_blank"
-           style="
-                display:inline-block;
-                margin-top:12px;
-                background: linear-gradient(135deg, #25D366, #128C7E);
-                color:white;
-                padding:12px 18px;
-                border-radius:8px;
-                text-decoration:none;
-                font-weight:600;
-           ">
-            💬 Chat on WhatsApp
-        </a>
-    </div>
 </section>
 
 <footer>
-    <p>© 2026 Nurul Ain Nafisah</p>
+© 2026 Nurul Ain Nafisah
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
-AOS.init({ duration: 800, once: true });
+AOS.init({duration:900, once:true});
 
-window.onscroll = () => {
-    let winScroll = document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById("progressBar").style.width = (winScroll / height) * 100 + "%";
-};
+const text = "Nurul Ain Nafisah";
+let i=0;
 
-const text = "Nurul Ain Nafisah Binti Muhamad";
-let i = 0;
-
-function type() {
-    if (i < text.length) {
+function type(){
+    if(i<text.length){
         document.getElementById("typing").innerHTML += text.charAt(i++);
-        setTimeout(type, 70);
+        setTimeout(type,80);
     }
 }
 type();
+
+/* particles */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<80;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*3,
+        d:Math.random()*1
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="rgba(168,85,247,0.6)";
+
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fill();
+
+        p.y += p.d;
+        if(p.y>canvas.height){
+            p.y=0;
+            p.x=Math.random()*canvas.width;
+        }
+    });
+
+    requestAnimationFrame(draw);
+}
+draw();
 </script>
 
 </body>
