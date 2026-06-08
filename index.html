@@ -1,329 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nurul Ain Nafisah - Portfolio Resume</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurul Ain Nafisah | Software Developer</title>
 
-<link href="" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<style>
-:root{
-    --bg1:#0b0014;
-    --bg2:#1a0033;
-    --purple:#a855f7;
-    --pink:#ec4899;
-    --glass:rgba(255,255,255,0.08);
-    --border:rgba(255,255,255,0.15);
-}
+    <style>
+        :root {
+            --bg: #05000a;
+            --purple: #a855f7;
+            --pink: #ec4899;
+            --glass: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.15);
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
 
-body{
-    background: radial-gradient(circle at top, #1b0033, #05000a);
-    color:#fff;
-    overflow-x:hidden;
-}
+        body {
+            background: radial-gradient(circle at top, #1b0033, var(--bg));
+            color: #fff;
+        }
 
-/* PARTICLES */
-#particles{
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    z-index:-2;
-}
+        /* ===== GLASS CARD ===== */
+        .glass {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 18px;
 
-/* GLASS */
-.glass{
-    background:var(--glass);
-    backdrop-filter:blur(12px);
-    border:1px solid var(--border);
-    border-radius:18px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.4);
-    transition:0.3s;
-}
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
 
-.glass:hover{
-    transform:translateY(-5px);
-}
+        /* ===== HEADER ===== */
+        header {
+            text-align: center;
+            padding: 70px 20px;
+        }
 
-/* HERO */
-header{
-    text-align:center;
-    padding:80px 20px;
-}
+        h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+        .tag {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
 
-.profile-pic{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid var(--purple);
-    box-shadow:0 0 25px rgba(168,85,247,0.5);
-}
+        /* ===== SKILLS ===== */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-header h1{
-    font-size:2.2rem;
-    background:linear-gradient(90deg,var(--purple),var(--pink));
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+        .skills span {
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+        }
 
-.tagline{
-    opacity:0.85;
-}
+        /* ===== PROJECT GRID ===== */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
 
-/* BADGES */
-.badges{
-    margin-top:15px;
-    display:flex;
-    gap:10px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
+        .card {
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+        }
 
-.badges span{
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:0.75rem;
-    background:rgba(255,255,255,0.05);
-    border:1px solid var(--border);
-}
+        /* ===== BUTTON ===== */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
 
-/* SECTION */
-.section{
-    width:90%;
-    max-width:900px;
-    margin:20px auto;
-    padding:25px;
-}
+        footer {
+            text-align: center;
+            opacity: 0.6;
+            padding: 20px;
+        }
 
-h2{
-    color:var(--purple);
-}
+        .project-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:18px;
+        }
 
-/* SKILLS */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
+        .card{
+            padding:18px;
+            border-radius:14px;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.12);
+            transition:0.3s;
+        }
 
-.skills span{
-    padding:8px 12px;
-    border-radius:20px;
-    background:linear-gradient(135deg,var(--purple),var(--pink));
-    font-size:0.8rem;
-}
+        .card:hover{
+            transform:translateY(-5px);
+            border-color:rgba(168,85,247,0.5);
+        }
 
-/* PROJECTS */
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-}
+        .card h3{
+            margin-bottom:8px;
+        }
 
-.project-card{
-    padding:15px;
-    border-radius:12px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid var(--border);
-    transition:0.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(168,85,247,0.2);
-}
-
-/* BUTTONS */
-.btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:12px 18px;
-    border-radius:10px;
-    text-decoration:none;
-    color:#fff;
-    background:linear-gradient(135deg,#25D366,#128C7E);
-    font-weight:600;
-}
-
-/* FLOAT */
-.float{
-    animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-    100%{transform:translateY(0);}
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    opacity:0.6;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-    header h1{font-size:1.6rem;}
-}
-</style>
+        .card p{
+            line-height:1.6;
+            font-size:0.9rem;
+        }
+    </style>
 </head>
 
 <body>
 
-<canvas id="particles"></canvas>
+    <!-- HEADER -->
+    <header data-aos="fade-down">
+        <h1>Nurul Ain Nafisah</h1>
+        <p class="tag">Software Developer | Full-Stack Web | APIs | Databases</p>
+        <p>📍 Malaysia | 📧 ainnafisah1001@gmail.com</p>
 
-<header class="glass float" data-aos="fade-down">
+        <a class="btn" href="your-cv.pdf" download>Download CV</a>
+    </header>
 
-    <div class="hero">
-        <img src="" class="profile-pic" alt="Profile">
+    <!-- PROFILE -->
+    <section class="glass" data-aos="fade-up">
+        <h2>Profile</h2>
+        <p>
+            Software Developer focused on building full-stack web applications using PHP, JavaScript, and MySQL.
+            Experienced in backend development, API integration, and database design.
+            Strong problem-solving mindset with interest in scalable system development and clean architecture.
+        </p>
+    </section>
 
-        <div>
-            <h1><span id="typing"></span></h1>
-            <p class="tagline">Building Intelligent Web & AR Systems</p>
-            <p>📍 Kuantan, Pahang | 📧 ainnafisah1001@gmail.com</p>
+    <!-- SKILLS -->
+    <section class="glass" data-aos="fade-up">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>PHP</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>MySQL</span>
+            <span>REST API</span>
+            <span>Git</span>
+            <span>Database Design</span>
+            <span>CRUD Systems</span>
+            <span>Debugging</span>
         </div>
-    </div>
+    </section>
 
-    <div class="badges">
-        <span>🚀 AR Developer</span>
-        <span>🔐 Watermarking Researcher</span>
-        <span>🤖 ML Explorer</span>
-    </div>
+    <!-- PROJECTS -->
+    <section class="glass" data-aos="fade-up">
+        <h2>Projects & Experience</h2>
 
-    <div>
-        <a class="btn" href="your-cv.pdf" download>📄 Download CV</a>
-        <a class="btn" href="https://github.com/ainafisah" target="_blank">💻 GitHub</a>
-    </div>
+        <div class="project-grid">
 
-</header>
+            <!-- INTERNSHIP -->
+            <div class="card">
 
-<section class="section glass" data-aos="fade-up">
-<h2>Profile</h2>
-<p>Master’s candidate in Software Engineering specializing in web systems, AR development, and intelligent watermarking research.</p>
-</section>
+                <h3>🏢 Internship – Web Development</h3>
 
-<section class="section glass" data-aos="zoom-in">
-<h2>Technical Skills</h2>
-<div class="skills">
-<span>PHP</span><span>Java</span><span>C++</span><span>C#</span>
-<span>Python</span><span>JavaScript</span><span>HTML</span>
-<span>CSS</span><span>MySQL</span><span>Unity</span>
-<span>Machine Learning</span><span>Git</span><span>REST API</span>
-</div>
-</section>
+                <p>
+                <span style="font-weight:600;">Role:</span> Web Developer Intern
+                </p>
 
-<section class="section glass" data-aos="fade-right">
-<h2>Education</h2>
-<div class="card">🎓 Master — UMP (2024–2025)</div>
-<div class="card">🎓 Bachelor — UNIMAS (2019–2023)</div>
-</section>
+                <p>
+                <span style="font-weight:600;">Tech:</span> PHP · MySQL · JavaScript · HTML · CSS · Git
+                </p>
 
-<section class="section glass" data-aos="fade-up">
-<h2>Projects</h2>
+                <hr style="opacity:0.2;margin:10px 0;">
 
-<div class="project-grid">
+                <p><b>Highlights</b></p>
+                <p>
+                ✔ Built backend features using PHP<br>
+                ✔ Managed MySQL database (CRUD operations)<br>
+                ✔ Fixed bugs and improved system stability<br>
+                ✔ Implemented role-based authentication<br>
+                ✔ Worked in team development environment
+                </p>
 
-    <div class="project-card">
-        <h3>🔐 Watermarking AI</h3>
-        <p>IWT + Schur Decomposition + RL Optimization</p>
-    </div>
+            </div>
 
-    <div class="project-card">
-        <h3>🧠 AR Therapy System</h3>
-        <p>Unity + C# immersive simulation</p>
-    </div>
+            <!-- MASTER -->
+            <div class="card">
 
-</div>
+                <h3>🎓 Master’s Project</h3>
 
-</section>
+                <p>
+                <span style="font-weight:600;">Focus:</span> Intelligent System Development
+                </p>
 
-<section class="section glass" data-aos="fade-up" style="text-align:center;">
-<h2>Contact</h2>
-<p>Let’s connect instantly 👇</p>
+                <p>
+                <span style="font-weight:600;">Tech:</span> Python · Java · C++ (research-based)
+                </p>
 
-<a class="btn" href="https://wa.me/" target="_blank">
-💬 WhatsApp Me
-</a>
+                <hr style="opacity:0.2;margin:10px 0;">
 
-</section>
+                <p><b>Highlights</b></p>
+                <p>
+                ✔ System design and architecture<br>
+                ✔ Algorithm development and optimization<br>
+                ✔ Data analysis and processing<br>
+                ✔ Performance testing and evaluation
+                </p>
 
-<footer>
-© 2026 Nurul Ain Nafisah
-</footer>
+            </div>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({duration:900, once:true});
+            <!-- PTCB -->
+            <div class="card">
 
-const text = "Nurul Ain Nafisah";
-let i=0;
+                <h3>🏫 PTCB System</h3>
 
-function type(){
-    if(i<text.length){
-        document.getElementById("typing").innerHTML += text.charAt(i++);
-        setTimeout(type,80);
-    }
-}
-type();
+                <p>
+                <span style="font-weight:600;">Role:</span> Full-Stack Developer
+                </p>
 
-/* particles */
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
+                <p>
+                <span style="font-weight:600;">Tech:</span> PHP · MySQL · JavaScript · HTML · CSS
+                </p>
 
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+                <hr style="opacity:0.2;margin:10px 0;">
 
-let particles=[];
+                <p><b>Features</b></p>
+                <p>
+                ✔ Multi-role system (Admin / Teacher / Parent)<br>
+                ✔ Student registration & progress tracking<br>
+                ✔ Secure login & session handling<br>
+                ✔ Database-driven dashboard<br>
+                ✔ Real-time updates with PHP & MySQL
+                </p>
 
-for(let i=0;i<80;i++){
-    particles.push({
-        x:Math.random()*canvas.width,
-        y:Math.random()*canvas.height,
-        r:Math.random()*3,
-        d:Math.random()*1
-    });
-}
+            </div>
 
-function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle="rgba(168,85,247,0.6)";
+        </div>
+    </section>
 
-    particles.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fill();
+    <!-- EXPERIENCE -->
+    <section class="glass" data-aos="fade-up">
+        <h2>Experience Focus</h2>
+        <p>
+            • Web application development (frontend + backend)<br />
+            • API integration and system communication<br />
+            • Database design and SQL optimization<br />
+            • Debugging and system troubleshooting<br />
+            • Git version control and collaboration<br />
+        </p>
+    </section>
 
-        p.y += p.d;
-        if(p.y>canvas.height){
-            p.y=0;
-            p.x=Math.random()*canvas.width;
-        }
-    });
+    <!-- CONTACT -->
+    <section class="glass" data-aos="fade-up" style="text-align:center;">
+        <h2>Let’s Work Together</h2>
+        <p>Open to Software Developer / Internship / Graduate roles</p>
 
-    requestAnimationFrame(draw);
-}
-draw();
-</script>
+        <a class="btn" href="https://github.com/ainafisah">GitHub Profile</a>
+    </section>
+
+    <footer>
+        © 2026 Nurul Ain Nafisah
+    </footer>
+
+    <!-- AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            once: true
+        });
+    </script>
 
 </body>
+
 </html>
