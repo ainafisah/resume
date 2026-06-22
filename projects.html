@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Nurul Ain Nafisah</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#0B0A12",
+                        card: "#151320",
+                        border: "#2E2A47",
+                        primary: "#6366F1",
+                        secondary: "#8B5CF6",
+                        accent: "#A855F7",
+                        text: "#E0E7FF"
+                    },
+                    boxShadow: {
+                        glow: "0 0 40px rgba(139, 92, 246, 0.25)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-bg text-text">
+
+    <!-- NAVIGATION -->
+    <nav class="flex items-center justify-between px-10 py-6 border-b border-border/40">
+        <div class="text-xl font-bold tracking-wide text-white">
+            Nurul Ain Nafisah
+        </div>
+
+        <ul class="flex gap-8 text-sm text-gray-300">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About</a></li>
+            <li><a href="projects.html" class="text-white font-medium">Projects</a></li>
+            <li><a href="skills.html" class="hover:text-white transition">Skills</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- PROJECTS SECTION -->
+        <section class="max-w-6xl mx-auto px-6 pb-20" data-aos="fade-up">
+
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold text-white">Selected Projects</h2>
+                <p class="text-gray-400 mt-2">
+                    Case-study driven engineering work focused on scalability, performance, and usability.
+                </p>
+            </div>
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- CARD 1 -->
+                <div class="card">
+                    <div class="h-40 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 border border-border mb-5"></div>
+                        
+                    <h3 class="text-xl font-semibold text-white">PTCB Global Learning System</h3>
+
+                    <p class="mt-3">
+                        A full-stack tuition management platform supporting multi-role access for admin, teachers,
+                        students, and parents with real-time academic operations.
+                    </p>
+
+                    <div class="flex gap-2 mt-4 flex-wrap text-xs">
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">PHP</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">MySQL</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">Bootstrap</span>
+                    </div>
+
+                    <div class="mt-5">
+                        <a href="https://www.ptcbgloballearning.net/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-semibold hover:scale-105 transition">
+                            Pusat Tuisyen Cendekiawan Bestari
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <div class="h-40 rounded-xl bg-gradient-to-r from-secondary/20 to-primary/20 border border-border mb-5"></div>
+
+                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                        <h3 class="text-xl font-semibold text-white">
+                            Healthcare E-Commerce & Rental Platform
+                        </h3>
+
+                        <span class="px-3 py-1 text-xs rounded-full bg-purple-600/20 border border-purple-400/30 text-purple-200">
+                            Client Project
+                        </span>
+                    </div>
+
+                    <p class="text-xs text-gray-400 mt-1">
+                        Reich Richesse Sdn Bhd (Established 2014)
+                    </p>
+
+                    <p class="mt-3">
+                        Transformed a traditional healthcare supplier into a digital ecosystem supporting medical equipment sales, rental services,
+                        and Waqaf donation management. Improved accessibility for products such as nursing beds, wheelchairs, and mobility aids
+                        with streamlined online workflows.
+                    </p>
+
+                    <div class="mt-4 space-y-2 text-sm text-gray-300">
+                        <p>• Integrated inventory management system for real-time stock and rental tracking.</p>
+                        <p>• Developed rental + Waqaf donation modules for end-to-end service automation.</p>
+                        <p>• Implemented WhatsApp integration for direct customer communication (Encik Faizal).</p>
+                        <p>• Enhanced UI/UX for better product discovery and mobile responsiveness.</p>
+                    </div>
+
+                    <div class="flex gap-2 mt-4 flex-wrap text-xs">
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">WordPress</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">WooCommerce</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">PHP</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">MySQL</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">HTML5</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">Tailwind CSS</span>
+                    </div>
+
+                    <div class="mt-5">
+                        <a href="https://www.reich-healthcare.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-semibold hover:scale-105 transition">
+                            Reich Richesse Sdn Bhd
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <div class="h-40 rounded-xl bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-border mb-5"></div>
+
+                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                        <h3 class="text-xl font-semibold text-white">
+                            Healthcare Product E-Commerce Website
+                        </h3>
+
+                        <span class="px-3 py-1 text-xs rounded-full bg-indigo-600/20 border border-indigo-400/30 text-indigo-200">
+                            Client Project
+                        </span>
+                    </div>
+
+                    <p class="text-xs text-gray-400 mt-1">
+                        Medical & Healthcare Product Platform
+                    </p>
+
+                    <p class="mt-3">
+                        Developed a responsive e-commerce website for healthcare-related products, aligned with an existing medical supply ecosystem.
+                        The platform focuses on structured product presentation, improved user navigation, and seamless inquiry-to-purchase flow.
+                    </p>
+
+                    <div class="mt-4 space-y-2 text-sm text-gray-300">
+                        <p>• Built product listing structure with clear categorization for healthcare items.</p>
+                        <p>• Implemented responsive UI optimized for mobile and desktop users.</p>
+                        <p>• Integrated inquiry/contact flow to improve customer engagement and conversion.</p>
+                        <p>• Maintained consistent design system aligned with existing healthcare platform branding.</p>
+                    </div>
+
+                    <div class="flex gap-2 mt-4 flex-wrap text-xs">
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">WordPress</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">WooCommerce</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">HTML5</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">CSS3</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+                    <div class="h-52 rounded-xl bg-gradient-to-r from-accent/20 via-primary/20 to-secondary/20 border border-border mb-5"></div>
+
+                    <h3 class="text-2xl font-semibold text-white">
+                        Master’s Research Project — Intelligent Systems
+                    </h3>
+
+                    <p class="mt-4 max-w-3xl">
+                        Designed and developed an intelligent system architecture focused on algorithm optimization,
+                        data analysis, and performance evaluation using Python, Java, and C++.
+                    </p>
+
+                    <div class="flex gap-2 mt-5 flex-wrap text-xs">
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">Python</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">Java</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">C++</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-border">AI Systems</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="max-w-6xl mx-auto px-6 pb-24" data-aos="fade-up">
+
+            <div class="rounded-3xl border border-border bg-gradient-to-r from-primary via-secondary to-accent p-12 text-center">
+
+                <h2 class="text-3xl md:text-4xl font-bold text-white">
+                    Have a Complex Project?
+                </h2>
+
+                <p class="text-white/80 mt-4 max-w-2xl mx-auto">
+                    Let’s build secure, scalable, and elegant software solutions that create real-world impact.
+                </p>
+
+                <a class="mt-8 inline-block px-8 py-3 bg-white text-black font-semibold rounded-full hover:scale-105 transition"
+                    href="https://wa.me/601169112711"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Let's Collaborate
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-border py-10 text-center text-gray-400">
+        © 2026 Nurul Ain Nafisah. All Rights Reserved.        
+    </footer>
+
+  
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+:root {
+    --bg: #070312;
+
+    /* Glass system */
+    --glass: rgba(255, 255, 255, 0.06);
+    --glass-strong: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.12);
+
+    /* Brand colors */
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+    --blue: #6366f1;
+
+    /* Text */
+    --text: #ffffff;
+    --secondary: #cfcfe7;
+    --muted: rgba(255, 255, 255, 0.65);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+}
+
+/* 🌌 DREAMY PURPLE BACKGROUND */
+body {
+    background:
+        radial-gradient(circle at top left, rgba(168, 85, 247, 0.35), transparent 45%),
+        radial-gradient(circle at top right, rgba(139, 92, 246, 0.30), transparent 45%),
+        radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.20), transparent 50%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.25), transparent 50%),
+        #070312;
+
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ✨ optional glow layer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center,
+        rgba(168, 85, 247, 0.12),
+        transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+    animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(18px);
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid var(--border);
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: 0.3s;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--pink);
+}
+
+/* underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* GLASS CARD SYSTEM */
+.glass {
+    width: 90%;
+    max-width: 900px;
+    margin: 110px auto 20px;
+    padding: 28px;
+    border-radius: 20px;
+
+    background: var(--glass);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.tag {
+    margin-top: 12px;
+    opacity: 0.85;
+    font-size: 1rem;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.25);
+}
+
+/* PROJECT GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 16px;
+
+    background: var(--glass);
+    border: 1px solid var(--border);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(236, 72, 153, 0.6);
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.card p {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    transition: 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(236, 72, 153, 0.35);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    opacity: 0.6;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav {
+        padding: 14px 5%;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .glass {
+        padding: 20px;
+    }
+}

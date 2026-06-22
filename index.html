@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Nurul Ain Nafisah</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#0B0A12",
+                        card: "#151320",
+                        border: "#2E2A47",
+                        primary: "#6366F1",
+                        secondary: "#8B5CF6",
+                        accent: "#A855F7",
+                        text: "#E0E7FF"
+                    },
+                    boxShadow: {
+                        glow: "0 0 40px rgba(139, 92, 246, 0.25)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-bg text-text">
+
+    <!-- NAVIGATION -->
+    <nav class="flex items-center justify-between px-10 py-6 border-b border-border/40">
+
+        <div class="text-xl font-bold tracking-wide text-white">
+            Nurul Ain Nafisah
+        </div>
+
+        <ul class="flex gap-8 text-sm text-gray-300">
+            <li><a href="index.html" class="text-white font-medium">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About</a></li>
+            <li><a href="projects.html" class="hover:text-white transition">Projects</a></li>
+            <li><a href="skills.html" class="hover:text-white transition">Skills</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+
+        <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">
+            Hi, I'm Nurul Ain 👋
+        </h1>
+
+        <p class="text-gray-300 max-w-2xl text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            A Software Developer passionate about building scalable web applications,
+            intelligent systems, and clean user experiences.
+        </p>
+
+        <div class="mt-10 flex gap-4 flex-wrap justify-center" data-aos="fade-up" data-aos-delay="400">
+
+            <a href="projects.html" class="btn">
+                View Projects
+            </a>
+
+            <a href="contact.html"
+                class="px-6 py-3 rounded-full border border-border hover:bg-white/10 transition">
+                Contact Me
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 grid md:grid-cols-3 gap-6">
+
+        <div class="card" data-aos="fade-up">
+            <h3 class="text-xl font-semibold mb-2">Full-Stack Developer</h3>
+            <p>
+                Building responsive and scalable web applications using PHP, JavaScript, and MySQL.
+            </p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="text-xl font-semibold mb-2">Problem Solver</h3>
+            <p>
+                Focused on writing clean, efficient, and maintainable code for real-world systems.
+            </p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-xl font-semibold mb-2">Research Background</h3>
+            <p>
+                Experienced in intelligent systems, algorithms, and performance optimization.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-4xl mx-auto px-6 pb-24 text-center" data-aos="fade-up">
+
+        <div class="glass">
+
+            <h2 class="text-3xl font-bold mb-4">
+                Let's Build Something Amazing
+            </h2>
+
+            <p class="text-gray-300 mb-6">
+                Open to software development opportunities and collaboration.
+            </p>
+
+            <a href="contact.html" class="btn">
+                Get In Touch
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-10 text-gray-500 border-t border-border/40">
+        © 2026 Nurul Ain Nafisah. All Rights Reserved.
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
